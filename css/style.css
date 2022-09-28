@@ -38,3 +38,49 @@ img {
   margin: 0 auto;
   padding: 0 30px;
 }
+
+/* ==================================== Header Start ==================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 0 0 0;
+}
+.header-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-menu__list {
+  display: flex;
+  list-style: none;
+}
+.header-menu__item {
+  height: 1em;
+  overflow: hidden;
+  margin-left: 60px;
+}
+.header-menu__item:first-child {
+  height: 1em;
+  margin-left: 0;
+  overflow: hidden;
+}
+.header-menu__link {
+  display: block;
+  text-decoration: none;
+  font-family: 'Roboto';
+  color: #ffffff;
+  transition: all 0.2s linear;
+}
+.header-menu__link:hover, .header-menu__link:focus, .header-menu__link:active {
+  transform: translateY(-1em);
+}
+.header-menu__link p {
+  margin: 0;
+}
+.link-red {
+  color: #D02B2B;
+}
+/* ==================================== Header End ==================================== */
