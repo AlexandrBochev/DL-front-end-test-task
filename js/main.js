@@ -1,19 +1,18 @@
 // Burger Menu
 const burgerBtnOpen = document.querySelector('.burger-btn-open');
 const burgerBtnClose = document.querySelector('.burger-btn-close');
+const headerMenu = document.querySelector('.header-menu')
 const burgerBackground = document.querySelector('.burger-background');
 
 burgerBtnOpen.addEventListener('click', () => {
+  burgerBtnOpen.classList.add('burger-open-active');
+  burgerBtnClose.classList.add('burger-close-active');
+  headerMenu.classList.add('menu-active');
   burgerBackground.classList.add('burger-open');
-  burgerBtnOpen.style.scale = '0';
-  burgerBtnOpen.style.transition = 'all .4s ease 0s';
-  burgerBtnClose.style.scale = '1';
-  burgerBtnClose.style.transition = 'all .4s ease .2s';
 });
 burgerBtnClose.addEventListener('click', () => {
+  burgerBtnOpen.classList.remove('burger-open-active');
+  burgerBtnClose.classList.remove('burger-close-active');
+  headerMenu.classList.remove('menu-active');
   burgerBackground.classList.remove('burger-open');
-  burgerBtnOpen.style.scale = '1';
-  burgerBtnOpen.style.transition = 'all .4s ease .2s';
-  burgerBtnClose.style.scale = '0';
-  burgerBtnClose.style.transition = 'all .4s ease 0s';
 });

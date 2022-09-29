@@ -143,11 +143,31 @@ img {
   }
   .burger-btn-open {
     scale: 1;
+    transition: all .4s ease .2s;
+  }
+  .burger-btn-close {
+    scale: 0;
+    transition: all .4s ease 0s;
+  }
+  .burger-open-active {
+    scale: 0;
+    transition: all .4s ease 0s;
+  }
+  .burger-close-active {
+    scale: 1;
+    transition: all .4s ease .2s;
   }
   .header-menu {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    opacity: 0;
+    transform: translate(0, -100%);
+    transition: all .2s ease 0s;
+  }
+  .menu-active {
+    transform: translate(-50%, 0);
+    opacity: 1;
+    transition: all .4s ease .2s;
   }
   .header-menu__list {
     display: block;
@@ -165,5 +185,8 @@ img {
   }
   .header-menu__link:hover, .header-menu__link:focus, .header-menu__link:active {
     transform: translateY(-1.2em);
+  }
+  .link-red {
+    color: #141429;
   }
 }
