@@ -46,6 +46,7 @@ img {
   left: 0;
   width: 100%;
   padding: 40px 0 0 0;
+  z-index: 100;
 }
 .header-body {
   display: flex;
@@ -223,6 +224,105 @@ img {
   opacity: 1;
 }
 /* ==================================== Santa Claus End ==================================== */
+
+/* ==================================== Mountains Start ==================================== */
+.mountains {
+  height: 100vh;
+  background-image: url('../img/mountains.jpg');
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+}
+.mountains__bloks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30vh;
+}
+.mountains__left-block {
+  max-width: 700px;
+  margin-right: 30px;
+}
+.mountains__choose {
+  font-weight: 400;
+  font-size: 2.4em;
+  margin: 0 0 30px 0;
+}
+.mountains__presents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 520px;
+}
+.mountains__btn {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: inset 4px 10px 15px rgba(0, 0, 0, 0.25);
+  transition: all .2s;
+}
+.mountains__btn img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 120px;
+}
+.mountains__btn:hover, .mountains__btn:focus {
+  transform: rotate(15deg);
+  scale: 1.1;
+}
+.mountains__btn_active {
+  background: none;
+  box-shadow: none;
+}
+.mountains__right-block {
+  position: relative;
+  max-width: 550px;
+  min-width: 490px;
+  border: 3px solid #FFFFFF;
+  border-radius: 20px;
+  padding: 60px 40px 40px 35px;
+}
+.article-block {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  scale: 0;
+  transition: all .4s;
+}
+.article {
+  max-width: 300px;
+  margin-right: 30px;
+}
+.article__title {
+  margin: 0 0 40px 0;
+}
+.article__text {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 1.75em;
+  margin: 0;
+}
+.article-img {
+  min-width: 150px;
+}
+.article-img img {
+  width: 100%;
+}
+.article-block-active {
+  position: static;
+  opacity: 1;
+  scale: 1;
+}
+/* ==================================== Mountains End ==================================== */
 
 /* ==================================== Media ==================================== */
 @media (max-width: 767px) {

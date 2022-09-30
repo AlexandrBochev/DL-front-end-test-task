@@ -54,3 +54,39 @@ if (animItems.length > 0) {
         animOnScroll();
     }, 3000);
 }
+
+// Mountains Choose your present
+const chooseBtnOne = document.querySelector('.choose-btn-1');
+const chooseBtnTwo = document.querySelector('.choose-btn-2');
+const chooseBtnThree = document.querySelector('.choose-btn-3');
+const blockSock = document.querySelector('.block-sock');
+const blockCap = document.querySelector('.block-cap');
+const blockBag = document.querySelector('.block-bag');
+
+chooseBtnOne.addEventListener('click', (e) => {
+    e.preventDefault();
+    blockSock.classList.add('article-block-active');
+    blockCap.classList.remove('article-block-active');
+    blockBag.classList.remove('article-block-active');
+    chooseBtnOne.classList.add('mountains__btn_active');
+    chooseBtnTwo.classList.remove('mountains__btn_active');
+    chooseBtnThree.classList.remove('mountains__btn_active');
+});
+chooseBtnTwo.addEventListener('click', (e) => {
+    e.preventDefault();
+    blockSock.classList.remove('article-block-active');
+    blockCap.classList.add('article-block-active');
+    blockBag.classList.remove('article-block-active');
+    chooseBtnOne.classList.remove('mountains__btn_active');
+    chooseBtnTwo.classList.add('mountains__btn_active');
+    chooseBtnThree.classList.remove('mountains__btn_active');
+});
+chooseBtnThree.addEventListener('click', (e) => {
+    e.preventDefault();
+    blockSock.classList.remove('article-block-active');
+    blockCap.classList.remove('article-block-active');
+    blockBag.classList.add('article-block-active');
+    chooseBtnOne.classList.remove('mountains__btn_active');
+    chooseBtnTwo.classList.remove('mountains__btn_active');
+    chooseBtnThree.classList.add('mountains__btn_active');
+});
