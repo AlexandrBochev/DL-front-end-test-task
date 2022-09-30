@@ -230,6 +230,7 @@ img {
   height: 100vh;
   background-image: url('../img/mountains.jpg');
   background-repeat: no-repeat;
+  background-position-x: left;
   overflow: hidden;
   background-size: cover;
 }
@@ -323,6 +324,84 @@ img {
   scale: 1;
 }
 /* ==================================== Mountains End ==================================== */
+
+/* ==================================== Deer Start ==================================== */
+.deer {
+  height: 100vh;
+  background-image: url('../img/deer.jpg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  overflow: hidden;
+  background-size: cover;
+}
+.deer__block {
+  margin-top: 25em;
+}
+.deer__title {
+  margin: 0 0 30px 0;
+}
+.deer__form {
+  width: 460px;
+}
+.deer__reg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.deer__input {
+  width: 220px;
+  font-family: Roboto;
+  color: #ffffff;
+  background: none;
+  border: 3px solid #ffffff;
+  border-radius: 15px;
+  padding: 12px 20px;
+  margin: 0 0 20px 0;
+}
+input::placeholder {
+  color: #ffffff;
+}
+.deer_area {
+  width: 100%;
+  font-family: Roboto;
+  color: #ffffff;
+  background: none;
+  border: 3px solid #ffffff;
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin: 0 0 20px 0;
+}
+textarea::placeholder {
+  color: #ffffff;
+}
+.checkbox__container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-left: 40px;
+}
+.checkbox__container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #ffffff;
+  border: 2px solid #D02B2B;
+  border-radius: 3px;
+}
+/* ==================================== Deer End ==================================== */
 
 /* ==================================== Media ==================================== */
 @media (max-width: 767px) {
