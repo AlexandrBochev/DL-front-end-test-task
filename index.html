@@ -131,6 +131,7 @@
 
     <!-- Deer Start -->
     <section class="deer">
+      <div class="select__bg"></div>
       <div class="wrapper">
         <div class="deer__block">
           <h2 class="deer__title">Write us<br>for real presents</h2>
@@ -138,19 +139,24 @@
             <div class="deer__reg">
               <input type="text" placeholder="Name" name="name" class="deer__input">
               <input type="tel" placeholder="Phone" name="tel" class="deer__input">
-              <select name="gender" class="deer__input">
-                <option value="gender">Gender</option>
-                <option value="boy">Boy</option>
-                <option value="girl">Girl</option>
-              </select>
+
+              <div class="select">
+                <div class="select__header deer__input">
+                  <span class="select__current">Gender</span>
+                  <img src="./img/svg/select-arrow.svg" class="select__arrow" alt="Select Arrow">
+                </div>
+                <div class="select__body">
+                  <div class="select__item select__boy">Boy</div>
+                  <div class="select__item select__girl">Girl</div>
+                </div>
+              </div>
+
               <input type="text" placeholder="Email" name="email" class="deer__input">
             </div>
             <textarea name="text" placeholder="Your witsh" name="witsh" class="deer_area"></textarea>
             <div class="checkbox">
-              <label class="checkbox__container">Whant Coca-cola with present ?
-                <input type="checkbox" name="present" value="present" checked>
-                <span class="checkmark"></span>
-              </label>
+              <input type="checkbox" class="custom-checkbox" id="present" name="present" value="yes" checked>
+              <label for="present">Whant Coca-cola with present ?</label>
             </div>
         </div>
         </form>

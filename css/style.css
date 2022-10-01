@@ -361,6 +361,61 @@ img {
 input::placeholder {
   color: #ffffff;
 }
+.select {
+  position: relative;
+  width: 220px;
+}
+.select__bg_active {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.select__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition: all .2s ease 0s;
+}
+.select__header_active {
+  background: #E5E5E5;
+}
+.select__arrow {
+  z-index: 1;
+}
+.select__body {
+  position: absolute;
+  width: 220px;
+  height: 48px;
+  top: 0;
+  left: 0;
+  background: #FFFCFC;
+  border: 3px solid #FFFFFF;
+  border-radius: 15px;
+  padding: 48px 0 20px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s ease 0s;
+}
+.select__body_active {
+  height: 148px;
+  opacity: 1;
+  visibility: visible;
+}
+.select__item {
+  font-family: 'Roboto';
+  margin-top: 20px;
+  color: #CECECE;
+  cursor: pointer;
+}
+.select__item:hover, .select__item:focus {
+  color: #D02B2B;
+}
 .deer_area {
   width: 100%;
   font-family: Roboto;
@@ -374,32 +429,37 @@ input::placeholder {
 textarea::placeholder {
   color: #ffffff;
 }
-.checkbox__container {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-left: 40px;
-}
-.checkbox__container input {
+.custom-checkbox {
   position: absolute;
+  z-index: -1;
   opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
 }
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
+.checkbox {
+  font-family: 'Roboto';
+  color: #D02B2B;
+}
+.custom-checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.custom-checkbox+label::before {
+  content: '';
+  display: inline-block;
   width: 20px;
-  background: #ffffff;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
   border: 2px solid #D02B2B;
   border-radius: 3px;
+  margin-right: 7px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.custom-checkbox:checked+label::before {
+  border-color: #D02B2B;
+  background-color: #ffffff;
+  background-image: url('../img/svg/check.svg');
 }
 /* ==================================== Deer End ==================================== */
 

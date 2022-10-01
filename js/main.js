@@ -90,3 +90,34 @@ chooseBtnThree.addEventListener('click', (e) => {
     chooseBtnTwo.classList.remove('mountains__btn_active');
     chooseBtnThree.classList.add('mountains__btn_active');
 });
+
+// Deer Select
+const selectHeader = document.querySelector('.select__header');
+const selectBody = document.querySelector('.select__body');
+const selectBoy = document.querySelector('.select__boy');
+const selectGirl = document.querySelector('.select__girl');
+const selectBg = document.querySelector('.select__bg');
+const selectCurrent = document.querySelector('.select__current');
+
+selectHeader.addEventListener('click', () => {
+    selectHeader.classList.add('select__header_active');
+    selectBody.classList.add('select__body_active');
+    selectBg.classList.add('select__bg_active');
+});
+selectBg.addEventListener('click', () => {
+    selectHeader.classList.remove('select__header_active');
+    selectBody.classList.remove('select__body_active');
+    selectBg.classList.remove('select__bg_active');
+});
+selectBoy.addEventListener('click', () => {
+    selectHeader.classList.remove('select__header_active');
+    selectBody.classList.remove('select__body_active');
+    selectBg.classList.remove('select__bg_active');
+    selectCurrent.innerHTML = 'Boy'
+});
+selectGirl.addEventListener('click', () => {
+    selectHeader.classList.remove('select__header_active');
+    selectBody.classList.remove('select__body_active');
+    selectBg.classList.remove('select__bg_active');
+    selectCurrent.innerHTML = 'Girl'
+});
