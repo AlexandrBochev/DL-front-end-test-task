@@ -130,6 +130,10 @@ img {
   bottom: 0;
   z-index: 1;
   overflow: hidden;
+  transition: all 1.6s ease 0s;
+}
+.snowflake_active {
+  bottom: 65vh;
 }
 .snowflake img {
   animation: rotate-snowflake;
@@ -199,11 +203,7 @@ img {
   opacity: 0;
   transition: all .2s ease .2s;
 }
-.santa-claus__cloud._active {
-  scale: 1;
-  opacity: 1;
-}
-.cloud-text._active {
+.cloud_active {
   scale: 1;
   opacity: 1;
 }
@@ -541,7 +541,7 @@ textarea::placeholder {
   }
 }
 
-@media (max-height: 768px) {
+@media (max-height: 767px) {
   .header {
     position: absolute;
     padding: 30px 0 0 0;
@@ -571,6 +571,9 @@ textarea::placeholder {
 @media (max-width: 767px) {
   .wrapper {
     max-width: none;
+  }
+  .snowflake {
+    display: none;
   }
   .santa-claus__left-block {
     padding: 20vh 0 0 0;

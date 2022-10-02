@@ -18,42 +18,13 @@ burgerBtnClose.addEventListener('click', () => {
 });
 
 // Animation
-const animItems = document.querySelectorAll('._anim-items');
+const cloud = document.querySelector('.santa-claus__cloud');
+const cloudText = document.querySelector('.cloud-text');
 
-if (animItems.length > 0) {
-    window.addEventListener('scroll', animOnScroll);
-    function animOnScroll() {
-        for (let index = 0; index < animItems.length; index++) {
-            const animItem = animItems[index];
-            const animItemHeight = animItem.offsetHeight;
-            const animItemOffset = offset(animItem).top;
-            const animStart = 4;
-
-            let animItemPoint = window.innerHeight - animItemHeight / animStart;
-            if (animItemHeight > window.innerHeight) {
-                animItemPoint = window.innerHeight - window.innerHeight / animStart;
-            }
-
-            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-                animItem.classList.add('_active');
-            }else{
-                if (!animItem.classList.contains('_anim-no-hide')) {
-                animItem.classList.remove('_active');
-                }
-            }
-        }
-    }
-    function offset(el) {
-        const rect = el.getBoundingClientRect(),
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        return { top: rect.top + scrollTop, Left: rect.Left + scrollLeft }
-    }
-
-    setTimeout(() => {
-        animOnScroll();
-    }, 3000);
-}
+setTimeout(() => {
+    cloud.classList.add('cloud_active');
+    cloudText.classList.add('cloud_active');
+}, 3000);
 
 // Mountains Choose your present
 const chooseBtnOne = document.querySelector('.choose-btn-1');
@@ -124,6 +95,7 @@ selectGirl.addEventListener('click', () => {
 
 // Page Slider
 const slider = $(".slider");
+const snowflake = document.querySelector('.snowflake');
 
 slider.slick({
     speed: 800,
@@ -140,9 +112,11 @@ slider.slick({
 
 slider.on('wheel', (function(e) {
     e.preventDefault();
-      if (e.originalEvent.deltaY < 0) {
-    $(this).slick('slickPrev');
+    if (e.originalEvent.deltaY < 0) {
+        $(this).slick('slickPrev');
+        snowflake.classList.remove('snowflake_active');
     } else {
-    $(this).slick('slickNext');
+        $(this).slick('slickNext');
+        snowflake.classList.add('snowflake_active');
     }
 }));
