@@ -150,20 +150,14 @@ img {
 
 /* ==================================== Santa Claus Start ==================================== */
 .santa-claus {
-  background-image: url('../img/santa-claus.png');
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: bottom;
-}
-.santa-claus__bloks {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
+  position: relative;
   height: 100vh;
+  background-image: url('../img/svg/stars.svg');
+  background-position: center;
 }
 .santa-claus__left-block {
-  padding: 270px 0 50px 100px;
+  padding: 30vh 0 0 10vw;
+  z-index: -2;
 }
 .santa-claus__title {
   margin: 0 0 46px 0;
@@ -199,8 +193,8 @@ img {
 }
 .santa-claus__cloud {
   position: absolute;
-  bottom: 200px;
-  right: 510px;
+  bottom: 220px;
+  right: 500px;
   scale: 0;
   opacity: 0;
   transition: all .2s ease 0s;
@@ -222,6 +216,11 @@ img {
 .cloud-text._active {
   scale: 1;
   opacity: 1;
+}
+.santa-claus__img {
+  position: absolute;
+  bottom: -4px;
+  right: 0;
 }
 /* ==================================== Santa Claus End ==================================== */
 
@@ -270,7 +269,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-height: 120px;
+  max-height: 100%;
 }
 .mountains__btn:hover, .mountains__btn:focus {
   transform: rotate(15deg);
@@ -367,7 +366,7 @@ input::placeholder {
 }
 .select__bg_active {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 .select__header {
@@ -464,11 +463,121 @@ textarea::placeholder {
 /* ==================================== Deer End ==================================== */
 
 /* ==================================== Media ==================================== */
+@media (max-width: 1200px) {
+  .wrapper {
+    max-width: 1000px;
+  }
+  .santa-claus__left-block {
+    padding: 20vh 0 0 10vw;
+  }
+  .mountains__title {
+    font-size: 3.25em;
+    margin: 0 0 30px;
+  }
+  .mountains__choose {
+    font-size: 1.75em;
+    margin: 0 0 30px;
+  }
+  .mountains__btn {
+    width: 110px;
+    height: 110px;
+  }
+  .mountains__btn img {
+    max-height: 100%;
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    max-width: 780px;
+  }
+  .santa-claus__cloud {
+    bottom: 200px;
+    right: 460px;
+  }
+  .mountains__bloks {
+    flex-wrap: wrap;
+    margin-top: 15vh;
+    justify-content: center;
+  }
+  .mountains__left-block {
+    margin-right: 0;
+  }
+  .mountains__presents {
+    margin: 0 auto;
+  }
+  .mountains__btn {
+    width: 150px;
+    height: 150px;
+  }
+  .mountains__btn img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .mountains__right-block {
+    border: none;
+    padding: 80px 0 80px 0;
+  }
+  .article {
+    margin-right: 0;
+    margin-top: 30px;
+  }
+}
+
+@media (max-height: 768px) {
+  .header {
+    position: absolute;
+    padding: 30px 0 0 0;
+  }
+  .santa-claus__img {
+    max-width: 100vh;
+  }
+  .santa-claus__cloud {
+    bottom: 20vh;
+    right: 60vh;
+  }
+  .cloud-text {
+    top: 6vh;
+    left: 6vh;
+    font-size: 2.5vh;
+  }
+  .mountains {
+    height: 100%;
+    padding: 0 0 5vh;
+  }
+  .deer {
+    height: 100%;
+    padding: 15vh 0 5vh;
+  }
+}
+
 @media (max-width: 767px) {
   .wrapper {
     max-width: none;
   }
+  .santa-claus__left-block {
+    padding: 20vh 0 0 0;
+  }
+  .santa-claus__title {
+    font-size: 3.25em;
+    margin: 0 0 30px;
+  }
+  .santa-claus__description {
+    font-size: 1.75em;
+    margin: 0 0 40px;
+  }
+  .santa-claus__btn {
+    margin: 0 auto;
+  }
+  .santa-claus__arrow {
+    display: none;
+  }
+  .santa-claus__cloud {
+    display: none;
+  }
   .header {
+    position: absolute;
     padding: 30px 0 0 0;
   }
   .header-body {
@@ -506,6 +615,9 @@ textarea::placeholder {
     transform: translate(0, -50%);
     transition: all .2s ease 0s;
   }
+  .mountains {
+    height: 100%;
+  }
   .menu-active {
     transform: translate(-50%, 50vh);
     opacity: 1;
@@ -530,5 +642,56 @@ textarea::placeholder {
   }
   .link-red {
     color: #141429;
+  }
+  .mountains__right-block {
+    min-width: 260px;
+  }
+  .mountains__presents {
+    max-width: none;
+  }
+  .mountains__btn {
+    width: 25vw;
+    height: 25vw;
+  }
+  .mountains__btn img {
+    max-height: 90%;
+    max-width: 80%;
+  }
+  .article-block {
+    flex-direction: column-reverse;
+  }
+  .article__title {
+    text-align: center;
+  }
+  .article {
+    max-width: none;
+  }
+  .deer {
+    height: 100%;;
+  }
+  .deer__block {
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+  }
+  .deer__title {
+    font-size: 3.25em;
+  }
+  .deer__reg {
+    flex-direction: column;
+  }
+  .deer__form {
+    width: 100%;
+  }
+  .deer__input {
+    width: 100%;
+  }
+  .select {
+    width: 100%;
+  }
+  .select__header {
+    width: 100%;
+  }
+  .select__body {
+    width: 100%;
   }
 }
