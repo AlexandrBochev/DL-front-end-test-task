@@ -121,3 +121,28 @@ selectGirl.addEventListener('click', () => {
     selectBg.classList.remove('select__bg_active');
     selectCurrent.innerHTML = 'Girl'
 });
+
+// Page Slider
+const slider = $(".slider");
+
+slider.slick({
+    speed: 800,
+    easing: 'ease',
+    vertical: true,
+    adaptiveHeight: true,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: "unslick",
+        }
+    ] 
+});
+
+slider.on('wheel', (function(e) {
+    e.preventDefault();
+      if (e.originalEvent.deltaY < 0) {
+    $(this).slick('slickPrev');
+    } else {
+    $(this).slick('slickNext');
+    }
+}));
