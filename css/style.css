@@ -152,16 +152,228 @@ img {
 }
 /* ==================================== Snowflake End ==================================== */
 
+/* ==================================== Snowfall Start ==================================== */
+.snowfall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.snowball-1 {
+  position: absolute;
+  top: -6vh;
+  left: 7vw;
+  animation: snowfall;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-2 {
+  position: absolute;
+  top: -8vh;
+  left: 20vw;
+  animation: snowfall;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-3 {
+  position: absolute;
+  top: -2vh;
+  left: 50vw;
+  animation: snowfall;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.snowball-4 {
+  position: absolute;
+  top: -6vh;
+  left: 70vw;
+  animation: snowfall;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-5 {
+  position: absolute;
+  top: -4vh;
+  left: 90vw;
+  animation: snowfall;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-6 {
+  position: absolute;
+  top: -6vh;
+  left: 10vw;
+  animation: snowfall;
+  animation-duration: 14s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-7 {
+  position: absolute;
+  top: -8vh;
+  left: 25vw;
+  animation: snowfall;
+  animation-duration: 11s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-8 {
+  position: absolute;
+  top: -2vh;
+  left: 40vw;
+  animation: snowfall;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.snowball-9 {
+  position: absolute;
+  top: -6vh;
+  left: 65vw;
+  animation: snowfall;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-10 {
+  position: absolute;
+  top: -4vh;
+  left: 80vw;
+  animation: snowfall;
+  animation-duration: 13s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-11 {
+  position: absolute;
+  top: -6vh;
+  left: 15vw;
+  animation: snowfall;
+  animation-duration: 19s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-12 {
+  position: absolute;
+  top: -8vh;
+  left: 30vw;
+  animation: snowfall;
+  animation-duration: 16s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-13 {
+  position: absolute;
+  top: -2vh;
+  left: 45vw;
+  animation: snowfall;
+  animation-duration: 17s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.snowball-14 {
+  position: absolute;
+  top: -6vh;
+  left: 60vw;
+  animation: snowfall;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-15 {
+  position: absolute;
+  top: -4vh;
+  left: 75vw;
+  animation: snowfall;
+  animation-duration: 18s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-16 {
+  position: absolute;
+  top: -8vh;
+  left: 35vw;
+  animation: snowfall;
+  animation-duration: 22s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-17 {
+  position: absolute;
+  top: -2vh;
+  left: 55vw;
+  animation: snowfall;
+  animation-duration: 24s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.snowball-18 {
+  position: absolute;
+  top: -6vh;
+  left: 85vw;
+  animation: snowfall;
+  animation-duration: 21s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+.snowball-19 {
+  position: absolute;
+  top: -4vh;
+  left: 93vw;
+  animation: snowfall;
+  animation-duration: 23s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+}
+@keyframes snowfall {
+  0% {
+    transform: translateY(-8vh);
+  }
+  100% {
+    transform: translateY(110vh);
+  }
+}
+/* ==================================== Snowfall End ==================================== */
+
 /* ==================================== Santa Claus Start ==================================== */
 .santa-claus {
   position: relative;
   height: 100vh;
-  background-image: url('../img/svg/stars.svg');
-  background-position: center;
+  animation: stars;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+@keyframes stars {
+  0% {
+    background: url('../img/svg/stars.svg');
+  }
+  20% {
+    background: url('../img/svg/stars-2.svg');
+  }
+  40% {
+    background: url('../img/svg/stars-2.svg');
+  }
+  60% {
+    background: url('../img/svg/stars-3.svg');
+  }
+  80% {
+    background: url('../img/svg/stars-3.svg');
+  }
+  100% {
+    background: url('../img/svg/stars.svg');
+  }
 }
 .santa-claus__left-block {
   padding: 30vh 0 0 10vw;
-  z-index: -2;
 }
 .santa-claus__title {
   margin: 0 0 46px 0;
