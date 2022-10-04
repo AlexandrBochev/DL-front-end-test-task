@@ -17,7 +17,7 @@ burgerBtnClose.addEventListener('click', () => {
   burgerBackground.classList.remove('burger-open');
 });
 
-// Animation
+// Animation Bubble Talk
 const cloud = document.querySelector('.santa-claus__cloud');
 const cloudText = document.querySelector('.cloud-text');
 
@@ -26,7 +26,7 @@ setTimeout(() => {
     cloudText.classList.add('cloud_active');
 }, 3000);
 
-// Mountains Choose your present
+// Mountains Choose Your Present
 const chooseBtnOne = document.querySelector('.choose-btn-1');
 const chooseBtnTwo = document.querySelector('.choose-btn-2');
 const chooseBtnThree = document.querySelector('.choose-btn-3');
@@ -93,7 +93,7 @@ selectGirl.addEventListener('click', () => {
     selectCurrent.innerHTML = 'Girl'
 });
 
-// Page Slider
+// Page Slider & Animation Snowflake
 const slider = $(".slider");
 const snowflake = document.querySelector('.snowflake');
 
