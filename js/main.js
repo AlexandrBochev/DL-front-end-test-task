@@ -2,18 +2,21 @@
 const burgerBtnOpen = document.querySelector('.burger-btn-open');
 const burgerBtnClose = document.querySelector('.burger-btn-close');
 const headerMenu = document.querySelector('.header-menu')
+const header = document.querySelector('.header')
 const burgerBackground = document.querySelector('.burger-background');
 
 burgerBtnOpen.addEventListener('click', () => {
   burgerBtnOpen.classList.add('burger-open-active');
   burgerBtnClose.classList.add('burger-close-active');
   headerMenu.classList.add('menu-active');
+  header.classList.add('header-open');
   burgerBackground.classList.add('burger-open');
 });
 burgerBtnClose.addEventListener('click', () => {
   burgerBtnOpen.classList.remove('burger-open-active');
   burgerBtnClose.classList.remove('burger-close-active');
   headerMenu.classList.remove('menu-active');
+  header.classList.remove('header-open');
   burgerBackground.classList.remove('burger-open');
 });
 
