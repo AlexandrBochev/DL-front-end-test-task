@@ -20,6 +20,42 @@ burgerBtnClose.addEventListener('click', () => {
   burgerBackground.classList.remove('burger-open');
 });
 
+// Mobile
+const mainContent = document.querySelector('.main-content')
+
+const isMobile = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBarry: function () {
+        return navigator.userAgent.match(/BlackBarry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+        return (
+            isMobile.Android() ||
+            isMobile.BlackBarry() ||
+            isMobile.iOS() ||
+            isMobile.Windows()
+        );
+    },
+}
+
+if (isMobile.any() && window.innerWidth < 768) {
+    mainContent.classList.remove('slider');
+}
+if (isMobile.any() && window.innerHeight < 768) {
+    mainContent.classList.remove('slider');
+}
+
 // Animation Bubble Talk
 const cloud = document.querySelector('.santa-claus__cloud');
 const cloudText = document.querySelector('.cloud-text');
@@ -107,10 +143,10 @@ slider.slick({
     adaptiveHeight: true,
     responsive: [
         {
-            breakpoint: 768,
-            settings: "unslick",
+        breakpoint: 768,
+        settings: "unslick"
         }
-    ] 
+    ],
 });
 
 slider.on('wheel', (function(e) {
